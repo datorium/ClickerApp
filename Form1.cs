@@ -31,8 +31,24 @@ namespace ClickerApp
             FirstButton.Top = rand.Next(0, 300);
             FirstButton.Left = rand.Next(0, 300);
             FirstButton.BackColor = Color.FromArgb(red, green, blue);
-            FirstButton.Font = new Font("Arial", fontSize, FontStyle.Bold);
-            fontSize -= 1;
+            FirstButton.Font = new Font("Arial", fontSize, FontStyle.Bold);            
+            
+            if(fontSize != 1)
+            {
+                fontSize -= 1;
+            }
+        }
+
+        private void CloseButton_MouseEnter(object sender, EventArgs e)
+        {
+            CloseButton.Top = rand.Next(0, 300);
+            CloseButton.Left = rand.Next(0, 300);
+        }
+
+        private void FirstButton_MouseEnter(object sender, EventArgs e)
+        {
+            FirstButton.Top = rand.Next(0, 300);
+            FirstButton.Left = rand.Next(0, 300);
         }
     }
 }
